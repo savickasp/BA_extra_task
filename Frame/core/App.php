@@ -32,7 +32,6 @@ class App
 
         //params
         $this->params = $url;
-
         $url = null;
     }
 

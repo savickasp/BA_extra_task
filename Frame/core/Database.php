@@ -4,6 +4,7 @@
 class Database
 {
     protected $conn;
+    protected $sql;
 
     protected function __construct()
     {
@@ -17,21 +18,21 @@ class Database
         }
     }
 
-    protected function selectArray($sql)
+    protected function selectArray()
     {
-        $ret = $this->conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        $ret = $this->conn->query($this->sql)->fetchAll(PDO::FETCH_ASSOC);
         return $ret;
     }
 
-    protected function selectObject($sql)
+    protected function selectObject()
     {
-        $ret = $this->conn->query($sql)->fetchAll(PDO::FETCH_OBJ);
+        $ret = $this->conn->query($this->sql)->fetchAll(PDO::FETCH_OBJ);
         return $ret;
     }
 
-    protected function insert_update_remove($sql)
+    protected function insert_update_remove()
     {
-        $this->conn->prepare($sql)->execute();
+        $this->conn->prepare($this->sql)->execute();
     }
 
     public function __destruct()

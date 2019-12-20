@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.9.2
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1:3306
+- Generation Time: Dec 20, 2019 at 02:39 PM
+- Server version: 10.4.10-MariaDB
+- PHP Version: 7.3.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="ba_extra" collation="utf16_lithuanian_ci" charset="utf16">
+            <pma:table name="avg_wage">
+                CREATE TABLE `avg_wage` (
+                  `lookupIdMonth` bigint(20) NOT NULL,
+                  `lookupId` int(11) NOT NULL,
+                  `month` int(11) NOT NULL,
+                  `avgWage` int(11) NOT NULL,
+                  `avgWage2` int(11) NOT NULL,
+                  UNIQUE KEY `lookupIdMonth` (`lookupIdMonth`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+            </pma:table>
+            <pma:table name="companies">
+                CREATE TABLE `companies` (
+                  `lookupId` int(11) NOT NULL,
+                  `code` int(11) NOT NULL,
+                  `jarCode` int(11) NOT NULL,
+                  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+                  `ecoActName` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+                  `ecoActCode` int(11) NOT NULL,
+                  `municipality` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+                  UNIQUE KEY `lookupId` (`lookupId`) USING BTREE
+                ) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+            </pma:table>
+            <pma:table name="insured">
+                CREATE TABLE `insured` (
+                  `lookupIdMonth` bigint(20) NOT NULL,
+                  `lookupId` int(11) NOT NULL,
+                  `month` int(11) NOT NULL,
+                  `numInsured` int(11) NOT NULL,
+                  `numInsured2` int(11) NOT NULL,
+                  UNIQUE KEY `lookupIdMonth` (`lookupIdMonth`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+            </pma:table>
+            <pma:table name="tax">
+                CREATE TABLE `tax` (
+                  `lookupIdMonth` bigint(20) NOT NULL,
+                  `lookupId` int(11) NOT NULL,
+                  `month` int(11) NOT NULL,
+                  `tax` int(11) NOT NULL,
+                  UNIQUE KEY `lookupIdMonth` (`lookupIdMonth`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'ba_extra'
+    -->
+    <database name="ba_extra">
+        <!-- Table avg_wage -->
+        <table name="avg_wage">
+            <column name="lookupIdMonth">48303201901</column>
+            <column name="lookupId">48303</column>
+            <column name="month">201901</column>
+            <column name="avgWage">0</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">48490201901</column>
+            <column name="lookupId">48490</column>
+            <column name="month">201901</column>
+            <column name="avgWage">938</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">48601201901</column>
+            <column name="lookupId">48601</column>
+            <column name="month">201901</column>
+            <column name="avgWage">1713</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49041201901</column>
+            <column name="lookupId">49041</column>
+            <column name="month">201901</column>
+            <column name="avgWage">2267</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49058201901</column>
+            <column name="lookupId">49058</column>
+            <column name="month">201901</column>
+            <column name="avgWage">1278</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49108201901</column>
+            <column name="lookupId">49108</column>
+            <column name="month">201901</column>
+            <column name="avgWage">1060</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49113201901</column>
+            <column name="lookupId">49113</column>
+            <column name="month">201901</column>
+            <column name="avgWage">1781</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49126201901</column>
+            <column name="lookupId">49126</column>
+            <column name="month">201901</column>
+            <column name="avgWage">1892</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49127201901</column>
+            <column name="lookupId">49127</column>
+            <column name="month">201901</column>
+            <column name="avgWage">2397</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49129201901</column>
+            <column name="lookupId">49129</column>
+            <column name="month">201901</column>
+            <column name="avgWage">1394</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49132201901</column>
+            <column name="lookupId">49132</column>
+            <column name="month">201901</column>
+            <column name="avgWage">1929</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49134201901</column>
+            <column name="lookupId">49134</column>
+            <column name="month">201901</column>
+            <column name="avgWage">1789</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49135201901</column>
+            <column name="lookupId">49135</column>
+            <column name="month">201901</column>
+            <column name="avgWage">2158</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49137201901</column>
+            <column name="lookupId">49137</column>
+            <column name="month">201901</column>
+            <column name="avgWage">1550</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49140201901</column>
+            <column name="lookupId">49140</column>
+            <column name="month">201901</column>
+            <column name="avgWage">1295</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">49790201901</column>
+            <column name="lookupId">49790</column>
+            <column name="month">201901</column>
+            <column name="avgWage">2426</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">50530201901</column>
+            <column name="lookupId">50530</column>
+            <column name="month">201901</column>
+            <column name="avgWage">2002</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">50700201901</column>
+            <column name="lookupId">50700</column>
+            <column name="month">201901</column>
+            <column name="avgWage">1454</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">51192201901</column>
+            <column name="lookupId">51192</column>
+            <column name="month">201901</column>
+            <column name="avgWage">0</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">51363201901</column>
+            <column name="lookupId">51363</column>
+            <column name="month">201901</column>
+            <column name="avgWage">2287</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">56355201901</column>
+            <column name="lookupId">56355</column>
+            <column name="month">201901</column>
+            <column name="avgWage">3800</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <table name="avg_wage">
+            <column name="lookupIdMonth">66648201901</column>
+            <column name="lookupId">66648</column>
+            <column name="month">201901</column>
+            <column name="avgWage">0</column>
+            <column name="avgWage2">0</column>
+        </table>
+        <!-- Table companies -->
+        <table name="companies">
+            <column name="lookupId">48303</column>
+            <column name="code">42399</column>
+            <column name="jarCode">0</column>
+            <column name="name">LATVIJOS RESPUBLIKOS AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">48490</column>
+            <column name="code">44717</column>
+            <column name="jarCode">0</column>
+            <column name="name">APAÅ TALINÄ– NUNCIATÅªRA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">48601</column>
+            <column name="code">45838</column>
+            <column name="jarCode">0</column>
+            <column name="name">GOETHE-INSTITUT</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49041</column>
+            <column name="code">50764</column>
+            <column name="jarCode">0</column>
+            <column name="name">BRITÅ² TARYBA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49058</column>
+            <column name="code">51006</column>
+            <column name="jarCode">0</column>
+            <column name="name">LENKIJOS RESPUBLIKOS AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49108</column>
+            <column name="code">51164</column>
+            <column name="jarCode">0</column>
+            <column name="name">RUSIJOS FEDERACIJOS AMBASADOS SOCIALINIO APRÅªPINIMO SKYRIUS</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49113</column>
+            <column name="code">51200</column>
+            <column name="jarCode">0</column>
+            <column name="name">JUNGTINIÅ² AMERIKOS VALSTIJÅ² AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49126</column>
+            <column name="code">51285</column>
+            <column name="jarCode">0</column>
+            <column name="name">Å VEDIJOS AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49127</column>
+            <column name="code">51289</column>
+            <column name="jarCode">0</column>
+            <column name="name">NORVEGIJOS KARALYSTÄ–S AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49129</column>
+            <column name="code">51292</column>
+            <column name="jarCode">0</column>
+            <column name="name">ITALIJOS RESPUBLIKOS AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49132</column>
+            <column name="code">51327</column>
+            <column name="jarCode">0</column>
+            <column name="name">VOKIETIJOS FEDERACINÄ–S RESPUBLIKOS AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49134</column>
+            <column name="code">51346</column>
+            <column name="jarCode">0</column>
+            <column name="name">PRANCÅªZIJOS RESPUBLIKOS AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49135</column>
+            <column name="code">51354</column>
+            <column name="jarCode">0</column>
+            <column name="name">DANIJOS KARALYSTÄ–S AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49137</column>
+            <column name="code">51360</column>
+            <column name="jarCode">0</column>
+            <column name="name">SUOMIJOS RESPUBLIKOS AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49140</column>
+            <column name="code">51370</column>
+            <column name="jarCode">0</column>
+            <column name="name">ÄŒEKIJOS RESPUBLIKOS AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">49790</column>
+            <column name="code">57432</column>
+            <column name="jarCode">0</column>
+            <column name="name">Å IAURÄ–S MINISTRÅ² TARYBOS BIURAS LIETUVOJE</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">50530</column>
+            <column name="code">66019</column>
+            <column name="jarCode">0</column>
+            <column name="name">JUGTINÄ–S DIDÅ½IOSIOS BRITANIJOS IR Å IAURÄ–S AIRIJOS KARALYSTÄ–S AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">50700</column>
+            <column name="code">68287</column>
+            <column name="jarCode">0</column>
+            <column name="name">PELESOS VIDURINÄ– MOKYKLA LIETUVIÅ²  MOKOMÄ„JA KALBA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">UÅ¾sienio Ä¯monÄ—</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">51192</column>
+            <column name="code">76186</column>
+            <column name="jarCode">0</column>
+            <column name="name">KANADOS AMBASADOS SKYRIUS</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">51363</column>
+            <column name="code">78138</column>
+            <column name="jarCode">0</column>
+            <column name="name">JAPONIJOS AMBASADA</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">Vilniaus m. sav.</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">56355</column>
+            <column name="code">248187</column>
+            <column name="jarCode">0</column>
+            <column name="name">RUTRONIK ELEKTRONISCHE BAUELEMENTE GMBH</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">UÅ¾sienio Ä¯monÄ—</column>
+        </table>
+        <table name="companies">
+            <column name="lookupId">66648</column>
+            <column name="code">590726</column>
+            <column name="jarCode">0</column>
+            <column name="name">NUKEM TECHNOLOGIES GMBH</column>
+            <column name="ecoActName"></column>
+            <column name="ecoActCode">0</column>
+            <column name="municipality">UÅ¾sienio Ä¯monÄ—</column>
+        </table>
+        <!-- Table insured -->
+        <table name="insured">
+            <column name="lookupIdMonth">48303201901</column>
+            <column name="lookupId">48303</column>
+            <column name="month">201901</column>
+            <column name="numInsured">3</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">48490201901</column>
+            <column name="lookupId">48490</column>
+            <column name="month">201901</column>
+            <column name="numInsured">6</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">48601201901</column>
+            <column name="lookupId">48601</column>
+            <column name="month">201901</column>
+            <column name="numInsured">8</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49041201901</column>
+            <column name="lookupId">49041</column>
+            <column name="month">201901</column>
+            <column name="numInsured">5</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49058201901</column>
+            <column name="lookupId">49058</column>
+            <column name="month">201901</column>
+            <column name="numInsured">22</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49108201901</column>
+            <column name="lookupId">49108</column>
+            <column name="month">201901</column>
+            <column name="numInsured">20</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49113201901</column>
+            <column name="lookupId">49113</column>
+            <column name="month">201901</column>
+            <column name="numInsured">122</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49126201901</column>
+            <column name="lookupId">49126</column>
+            <column name="month">201901</column>
+            <column name="numInsured">8</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49127201901</column>
+            <column name="lookupId">49127</column>
+            <column name="month">201901</column>
+            <column name="numInsured">9</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49129201901</column>
+            <column name="lookupId">49129</column>
+            <column name="month">201901</column>
+            <column name="numInsured">7</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49132201901</column>
+            <column name="lookupId">49132</column>
+            <column name="month">201901</column>
+            <column name="numInsured">22</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49134201901</column>
+            <column name="lookupId">49134</column>
+            <column name="month">201901</column>
+            <column name="numInsured">14</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49135201901</column>
+            <column name="lookupId">49135</column>
+            <column name="month">201901</column>
+            <column name="numInsured">6</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49137201901</column>
+            <column name="lookupId">49137</column>
+            <column name="month">201901</column>
+            <column name="numInsured">7</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49140201901</column>
+            <column name="lookupId">49140</column>
+            <column name="month">201901</column>
+            <column name="numInsured">6</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">49790201901</column>
+            <column name="lookupId">49790</column>
+            <column name="month">201901</column>
+            <column name="numInsured">7</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">50530201901</column>
+            <column name="lookupId">50530</column>
+            <column name="month">201901</column>
+            <column name="numInsured">43</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">50700201901</column>
+            <column name="lookupId">50700</column>
+            <column name="month">201901</column>
+            <column name="numInsured">14</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">51192201901</column>
+            <column name="lookupId">51192</column>
+            <column name="month">201901</column>
+            <column name="numInsured">3</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">51363201901</column>
+            <column name="lookupId">51363</column>
+            <column name="month">201901</column>
+            <column name="numInsured">12</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">56355201901</column>
+            <column name="lookupId">56355</column>
+            <column name="month">201901</column>
+            <column name="numInsured">9</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <table name="insured">
+            <column name="lookupIdMonth">66648201901</column>
+            <column name="lookupId">66648</column>
+            <column name="month">201901</column>
+            <column name="numInsured">1</column>
+            <column name="numInsured2">0</column>
+        </table>
+        <!-- Table tax -->
+        <table name="tax">
+            <column name="lookupIdMonth">48303201901</column>
+            <column name="lookupId">48303</column>
+            <column name="month">201901</column>
+            <column name="tax">0</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">48490201901</column>
+            <column name="lookupId">48490</column>
+            <column name="month">201901</column>
+            <column name="tax">1234</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">48601201901</column>
+            <column name="lookupId">48601</column>
+            <column name="month">201901</column>
+            <column name="tax">3075</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49041201901</column>
+            <column name="lookupId">49041</column>
+            <column name="month">201901</column>
+            <column name="tax">2101</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49058201901</column>
+            <column name="lookupId">49058</column>
+            <column name="month">201901</column>
+            <column name="tax">6356</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49108201901</column>
+            <column name="lookupId">49108</column>
+            <column name="month">201901</column>
+            <column name="tax">4653</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49113201901</column>
+            <column name="lookupId">49113</column>
+            <column name="month">201901</column>
+            <column name="tax">49383</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49126201901</column>
+            <column name="lookupId">49126</column>
+            <column name="month">201901</column>
+            <column name="tax">3452</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49127201901</column>
+            <column name="lookupId">49127</column>
+            <column name="month">201901</column>
+            <column name="tax">4930</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49129201901</column>
+            <column name="lookupId">49129</column>
+            <column name="month">201901</column>
+            <column name="tax">2251</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49132201901</column>
+            <column name="lookupId">49132</column>
+            <column name="month">201901</column>
+            <column name="tax">9428</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49134201901</column>
+            <column name="lookupId">49134</column>
+            <column name="month">201901</column>
+            <column name="tax">5710</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49135201901</column>
+            <column name="lookupId">49135</column>
+            <column name="month">201901</column>
+            <column name="tax">2967</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49137201901</column>
+            <column name="lookupId">49137</column>
+            <column name="month">201901</column>
+            <column name="tax">2477</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49140201901</column>
+            <column name="lookupId">49140</column>
+            <column name="month">201901</column>
+            <column name="tax">1666</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">49790201901</column>
+            <column name="lookupId">49790</column>
+            <column name="month">201901</column>
+            <column name="tax">3951</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">50530201901</column>
+            <column name="lookupId">50530</column>
+            <column name="month">201901</column>
+            <column name="tax">19318</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">50700201901</column>
+            <column name="lookupId">50700</column>
+            <column name="month">201901</column>
+            <column name="tax">4477</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">51192201901</column>
+            <column name="lookupId">51192</column>
+            <column name="month">201901</column>
+            <column name="tax">0</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">51363201901</column>
+            <column name="lookupId">51363</column>
+            <column name="month">201901</column>
+            <column name="tax">6010</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">56355201901</column>
+            <column name="lookupId">56355</column>
+            <column name="month">201901</column>
+            <column name="tax">7957</column>
+        </table>
+        <table name="tax">
+            <column name="lookupIdMonth">66648201901</column>
+            <column name="lookupId">66648</column>
+            <column name="month">201901</column>
+            <column name="tax">0</column>
+        </table>
+    </database>
+</pma_xml_export>

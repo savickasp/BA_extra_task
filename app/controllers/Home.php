@@ -13,7 +13,7 @@ class Home extends Controller
 
     private function index()
     {
-        $this->view->setPageTitle('labas');
+        $this->view->setPageTitle('Home');
         $this->view->printPage();
     }
 }

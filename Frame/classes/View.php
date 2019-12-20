@@ -30,8 +30,20 @@ class View
                         'href' => ROOT_URL . '/companies',
                     ],
                 ]
-            ]
-
+            ],
+        ],
+        'upadate' => [
+            'attr' => [
+                'class' => 'navbar-nav',
+            ],
+            'elements' => [
+                'Update database' => [
+                    'attr' => [
+                        'class' => 'nav-link text-primary',
+                        'href' => ROOT_URL . '/companies/updatedatabase',
+                    ],
+                ],
+            ],
         ],
     ],
 ];

@@ -6,7 +6,7 @@ class CompaniesView extends View
     protected $page = 'companies';
     protected $form = [
         'attr' => [
-            'method' => 'POST',
+            'method' => 'GET',
             'class' => 'form-search',
         ],
         'fields' => [
@@ -14,9 +14,9 @@ class CompaniesView extends View
                 'label' => 'Ieškoti pagal',
                 'type' => 'select',
                 'option' => [
-                    '0' => 'vienas',
-                    '1' => 'trys',
-                    '2' => 'du',
+                    'code' => 'Imones kodas',
+                    'name' => 'Pavadinimas',
+                    'municipality' => 'Veiklos vieta',
                 ],
                 'filter' => FILTER_SANITIZE_ENCODED,
                 'extra' => [
@@ -28,7 +28,7 @@ class CompaniesView extends View
                     'validate_not_empty',
                 ],
             ],
-            'gerimai' => [
+            'searchText' => [
                 'label' => 'Radio second',
                 'type' => 'text',
                 'extra' => [
@@ -54,6 +54,35 @@ class CompaniesView extends View
         ],
     ];
     protected $table = [
-
+        'attr' => [
+            'class' => ''
+        ],
+        'thead' => [
+            'attr' => [
+                'class' => 'bg-secondary',
+            ],
+            'row' => [
+                'Imones kodas',
+                'Imones pavadinimas',
+                'Vykdomos veiklos apskritis',
+                'Daugiau info',
+            ],
+        ],
+        'tbody' => [],
     ];
+
+    public function setRequestedCompanies($requestedConpanies)
+    {
+        $this->table['tbody'] = $requestedConpanies;
+    }
+
+    public function setPage($page)
+    {
+        $this->page = $page;
+    }
+
+    public function setTable($table)
+    {
+        $this->table = $table;
+    }
 }
